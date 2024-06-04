@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡¡¡Felicitaciones Ganaste!!!</title>
+    <link rel="stylesheet" href="reward.css">
+</head>
+
+<body>
+
+    <div id="completion" class="screen">
+        <h1>Felicidades, ¡has completado todas las misiones!</h1>
+        <p>Ahora conoces los secretos del mundo educativo. ¡Bien hecho!</p>
+
+        <!-- Agrega la recompensa aquí -->
+        <div class="reward">
+            <p class="description-reward">Tu recompensa:</p>
+            <img class="key-reward" src="llave-removebg-preview.png" alt="Sabiduría de la Vida">
+            <p class="description-reward">¡Has desbloqueado la "Llave de la Sabiduría"!</p>
+        </div>
+
+        <button class="go-start-button" onclick="goToStart()">Volver al inicio</button>
+    </div>
+
+    <script>
+        function goToStart() {
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+
+</html>

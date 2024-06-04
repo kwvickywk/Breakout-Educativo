@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión 6</title>
+    <link rel="stylesheet" href="mission6.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Misión 6: Gestión del aula y resolución de conflictos</h1>
+        <p>¿Qué habilidad es importante para la gestión del aula y resolución de conflictos?</p>
+        <div class="options">
+            <button class="option-button" onclick="checkAnswer(this, 0)">Autoritarismo</button>
+            <button class="option-button" onclick="checkAnswer(this, 1)">Dominio absoluto</button>
+            <button class="option-button" onclick="checkAnswer(this, 2)">Empatía</button>
+        </div>
+        <div id="result" class="result"></div>
+        <button id="next-question" class="next-question-button" onclick="goToNextQuestion()">Siguiente pregunta</button>
+    </div>
+
+    <script>
+        function checkAnswer(button, answer) {
+            let result = document.getElementById('result');
+            if (answer === 2) {
+                result.textContent = '¡Correcto!';
+                result.style.color = 'green';
+                document.getElementById('next-question').style.display = 'inline-block';
+
+                // Deshabilitar todos los botones
+                let buttons = document.getElementsByClassName('option-button');
+                for (let btn of buttons) {
+                    btn.disabled = true;
+                    btn.style.backgroundColor = '#cccccc';
+                    btn.style.cursor = 'not-allowed';
+                }
+            } else {
+                result.textContent = 'Incorrecto. Intenta de nuevo.';
+                result.style.color = 'red';
+                correctAnswerSelected = false;
+                document.getElementById('next-question').style.display = 'none';
+                button.disabled = true; // Deshabilitar el botón seleccionado incorrectamente
+            }
+        }
+
+        function goToNextQuestion() {
+            window.location.href = "reward.html";
+        }
+    </script>
+
+</body>
+
+</html>

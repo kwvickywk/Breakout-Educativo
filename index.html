@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Introducción -->
+        <div id="introduction" class="screen">
+            <h1>Bienvenido al Breakout Educativo</h1>
+            <p class="seg-title">Te encuentras en una misión para descubrir los secretos del Reino de Educalandia.</p>
+            <p class="history">
+                En el Reino de Educalandia, la maestra Clara fue convocada por el Gran Consejo de la Sabiduría para
+                enfrentar una serie de misiones que evaluarían su ética y habilidades pedagógicas.
+                Clara demostró que el respeto es fundamental en la labor docente, subrayó la importancia de la escucha
+                activa para una
+                comunicación efectiva, destacó la mejora de la práctica docente como objetivo principal de la
+                investigación-acción, defendió la protección de la privacidad en el uso de la tecnología educativa,
+                afirmó que atender a la diversidad es vital para la inclusión educativa y señaló que la empatía es
+                crucial para la gestión del aula y la resolución de conflictos. Tras superar todas las misiones, Clara
+                regresó a su escuela con un renovado compromiso, lista para inspirar a sus estudiantes y colegas a
+                través de estos principios. <br>
+                ¡Bienvenidos a Educalandia, donde ustedes también pueden convertirse en
+                maestros ejemplares!</p>
+            <p class="go-title">¿Estás listo para el desafío?</p>
+            <button onclick="startGame()">Comenzar</button>
+        </div>
+
+        <script>
+            //Boton de Comenzar que lleva a la misión 1
+            function startGame() {
+                window.location.href = "mission1.html";
+            }
+        </script>
+</body>
+
+</html>

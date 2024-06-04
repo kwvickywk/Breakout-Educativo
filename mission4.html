@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión 4</title>
+    <link rel="stylesheet" href="mission4.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Misión 4: Ética en el uso de la tecnología educativa</h1>
+        <p>¿Qué aspecto es fundamental para una ética en el uso de la tecnología educativa?</p>
+        <div class="options">
+            <button class="option-button" onclick="checkAnswer(this, 0)">Maximizar
+                beneficios personales</button>
+            <button class="option-button" onclick="checkAnswer(this, 1)">Protección de la
+                privacidad</button>
+            <button class="option-button" onclick="checkAnswer(this, 2)">Ignorar las
+                consecuencias</button>
+        </div>
+        <div id="result" class="result"></div>
+        <button id="next-question" class="next-question-button" onclick="goToNextQuestion()">Siguiente pregunta</button>
+    </div>
+
+    <script>
+        function checkAnswer(button, answer) {
+            let result = document.getElementById('result');
+            if (answer === 1) {
+                result.textContent = '¡Correcto!';
+                result.style.color = 'green';
+                document.getElementById('next-question').style.display = 'inline-block';
+
+                // Deshabilitar todos los botones
+                let buttons = document.getElementsByClassName('option-button');
+                for (let btn of buttons) {
+                    btn.disabled = true;
+                    btn.style.backgroundColor = '#cccccc';
+                    btn.style.cursor = 'not-allowed';
+                }
+            } else {
+                result.textContent = 'Incorrecto. Intenta de nuevo.';
+                result.style.color = 'red';
+                correctAnswerSelected = false;
+                document.getElementById('next-question').style.display = 'none';
+                button.disabled = true; // Deshabilitar el botón seleccionado incorrectamente
+            }
+        }
+
+        function goToNextQuestion() {
+            window.location.href = "mission5.html";
+        }
+    </script>
+
+</body>
+
+</html>

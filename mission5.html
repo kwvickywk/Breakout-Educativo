@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión 5</title>
+    <link rel="stylesheet" href="mission5.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Misión 5: Estrategias para la inclusión educativa</h1>
+        <p>¿Qué implica la inclusión educativa?</p>
+        <div class="options">
+            <button class="option-button" onclick="checkAnswer(this, 'correcta')">Atender a la diversidad</button>
+            <button class="option-button" onclick="checkAnswer(this, 'incorrecta')">Excluir a ciertos grupos</button>
+            <button class="option-button" onclick="checkAnswer(this, 'incorrecta')">Limitar el acceso a la
+                educación</button>
+        </div>
+        <div id="result" class="result"></div>
+        <button id="next-question" class="next-question-button" onclick="goToNextQuestion()">Siguiente pregunta</button>
+    </div>
+
+    <script>
+        function checkAnswer(button, answer) {
+            let result = document.getElementById('result');
+            if (answer === 'correcta') {
+                result.textContent = '¡Correcto!';
+                result.style.color = 'green';
+                document.getElementById('next-question').style.display = 'inline-block';
+
+                // Deshabilitar todos los botones
+                let buttons = document.getElementsByClassName('option-button');
+                for (let btn of buttons) {
+                    btn.disabled = true;
+                    btn.style.backgroundColor = '#cccccc';
+                    btn.style.cursor = 'not-allowed';
+                }
+            } else {
+                result.textContent = 'Incorrecto. Intenta de nuevo.';
+                result.style.color = 'red';
+                correctAnswerSelected = false;
+                document.getElementById('next-question').style.display = 'none';
+                button.disabled = true; // Deshabilitar el botón seleccionado incorrectamente
+            }
+        }
+
+        function goToNextQuestion() {
+            window.location.href = "mission6.html";
+        }
+    </script>
+
+</body>
+
+</html>
