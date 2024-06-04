@@ -12,7 +12,8 @@
 body {
     display: flex;
     justify-content: center;
-    padding: 40px 40px;
+    margin: 30px 0;
+    position: relative;
 }
 
 .container {
@@ -22,18 +23,25 @@ body {
     align-items: center;
     text-align: center;
     border-radius: 20px;
-    width: 900px;
-    padding: 10px;
-    height: 570px;
+    width: 1000px;
+    height: 590px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
 }
 
 .screen {
     background: white;
     text-align: center;
+    width: 700px;
+    height: 490px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
-
+img {
+    background: white;
+    width: 50px;
+}
 
 .screen h1,
 .screen p {
@@ -54,10 +62,12 @@ p {
     width: 700px;
 }
 
-.screen h1,
-.screen p,
-.screen button {
+.screen h1 {
     margin: 20px;
+}
+
+.screen p {
+    margin: 10px;
 }
 
 .screen button {
@@ -68,6 +78,7 @@ p {
     height: 50px;
     border: none;
     border-radius: 20px;
+    margin-top: 5px;
     cursor: pointer;
     transition: all 0.3s ease 0.1s;
 }
@@ -79,79 +90,66 @@ p {
     transform: scale(1.1);
 }
 
+.fixed-image {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 120px;
+    height: auto;
+    margin-right: 220px;
+    margin-bottom: 60px;
+    z-index: 1000;
+}
+
+.fixed-image2 {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 170px;
+    height: auto;
+    margin-right: 970px;
+    margin-bottom: 90px;
+    z-index: 2000;
+}
+
+
 
 /* Media Queries */
 
 /* Para dispositivos móviles */
 @media (max-width: 600px) {
-    body {
-        padding: 20px;
-    }
-
     .container {
-        width: 95%;
-        height: auto;
-        padding: 20px;
-        flex-direction: column;
+        width: 90%;
+        height: 1200px;
+
     }
 
     .screen {
-        width: 100%;
-    }
-
-    .history {
-        width: 90%;
-        font-size: 12px;
-    }
-
-    .screen h1 {
-        font-size: 1.5rem;
-    }
-
-    .screen p {
-        font-size: 1rem;
-    }
-
-    .screen button {
-        width: 90%;
-        height: 40px;
-        margin: 10px 0;
-    }
-}
-
-/* Para tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-    body {
-        padding: 30px;
-    }
-
-    .container {
-        width: 90%;
-        height: auto;
-        padding: 30px;
-        flex-direction: column;
-    }
-
-    .screen {
-        width: 100%;
-    }
-
-    .history {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .screen h1 {
-        font-size: 2rem;
-    }
-
-    .screen p {
-        font-size: 1.2rem;
-    }
-
-    .screen button {
         width: 80%;
-        height: 45px;
-        margin: 15px 0;
+        margin-top: -600px;
+    }
+
+    .history {
+        font-size: 12px;
+        width: 280px;
+    }
+
+    .screen button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .fixed-image {
+        width: 80px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        position: absolute;
+    }
+
+    .fixed-image2 {
+        width: 130px;
+        margin-bottom: 30px;
+        margin-right: 230px;
+        position: absolute;
     }
 }
