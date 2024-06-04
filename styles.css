@@ -125,7 +125,7 @@ p {
     }
 
     .screen {
-        width: 80%;
+        width: 90%;
         margin-top: -600px;
     }
 
@@ -149,7 +149,7 @@ p {
     .fixed-image2 {
         width: 130px;
         margin-bottom: 30px;
-        margin-right: 230px;
+        margin-right: 240px;
         position: absolute;
     }
 }
