@@ -153,3 +153,42 @@ p {
         position: absolute;
     }
 }
+
+
+/* Otro dispositivo*/
+@media (max-width: 344px) {
+    .container {
+        width: 90%;
+        height: 1200px;
+
+    }
+
+    .screen {
+        width: 80%;
+        margin-top: -600px;
+    }
+
+    .history {
+        font-size: 12px;
+        width: 225px;
+    }
+
+    .screen button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .fixed-image {
+        width: 45px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        position: absolute;
+    }
+
+    .fixed-image2 {
+        width: 70px;
+        margin-bottom: 30px;
+        margin-right: 230px;
+        position: absolute;
+    }
+}
